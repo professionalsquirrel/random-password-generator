@@ -12,9 +12,15 @@
         <h1>Generate a<br><span>Random Password</span></h1>
         <div class="display">
             <input type="text" id="password" placeholder="Password">
-            <img src="images/copy.png" alt="Copy icon">
+            <img src="images/copy.png" alt="Copy icon" onclick="copyPassword()">
         </div>
-        <button> <img src="images/thunder.png" alt="Thunder icon">Generate Password</button>
+        <button id="btn"> <img src="images/thunder.png" alt="Thunder icon">Generate Password</button>
     </div>
+    <script>
+        function copyPassword(){
+            passwordBox.select();
+            document.execCommand("copy");
+        };
+    </script>
 </body>
 </html>
